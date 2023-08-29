@@ -7,6 +7,22 @@ st.subheader("Powered by Kamran Feroz")
 
 openai.api_key = st.secrets["OPENAI_API_KEY"]
 
+# Include sidebar with credentials
+with st.sidebar:
+    st.markdown('Chat With DIDX.net (V 0.1)')
+    st.markdown(""" 
+                #### Let's contact:
+                [Kamran Feroz](https://www.linkedin.com/in/kamranferoz/)
+
+                #### Powered by
+                [OpenAI](https://openai.com/)\n
+                [Langchain](https://github.com/hwchase17/langchain)\n
+                [DIDX Bot!](https://github.com/kamranferoz/didxBot)
+                """)
+st.markdown(
+    "<style>#MainMenu{visibility:hidden;}</style>",
+    unsafe_allow_html=True)
+
 if "openai_model" not in st.session_state:
     st.session_state["openai_model"] = "gpt-3.5-turbo"
 
