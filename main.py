@@ -1,11 +1,11 @@
 import openai
 import streamlit as st
-import config
+
 
 st.title("Chat With DIDX.net...")
 st.subheader("Powered by Kamran Feroz")
 
-openai.api_key = config.OPENAI_API_KEY 
+openai.api_key = st.secrets['OPENAI_API_KEY']
 
 if "openai_model" not in st.session_state:
     st.session_state["openai_model"] = "gpt-3.5-turbo"
