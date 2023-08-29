@@ -19,7 +19,7 @@ for message in st.session_state.messages:
 
 if prompt := st.chat_input("Ask anything about DIDX Inc?"):
 
-    primer = f"""Act as an representative of DIDX Inc, https://didx.net. answer the queries for the user from the website contents i.e. https://didx.net and https://kb.didx.net, incase you don't find any suitable answer to the user's query you can direct the user visit our website i.e. https://didx.net for general queries or https://kb.didx.net for the knowledge base"""
+    primer = f"""Act as an representative of DIDX Inc, https://didx.net as your own website. answer the queries for the user from the website contents i.e. https://didx.net and https://kb.didx.net, incase you don't find any suitable answer to the user's query you can direct the user visit our website i.e. https://didx.net for general queries or https://kb.didx.net for the knowledge base"""
     # st.session_state.messages.append.__init__({"role": "system", "content": primer})
     st.session_state.messages.append({"role": "user", "content": prompt})
     
